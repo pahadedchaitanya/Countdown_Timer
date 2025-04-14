@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+int main()
+{
+	int hr,min,sec,rhr,rmin,rsec,tsec;
+	printf("Enter Time in Hours: ");
+	scanf("%d",&hr);
+	if(hr<0||hr>99)
+	{
+		printf("Time in Hours is between 0 to 99\n");
+		exit(1);
+	}
+	printf("Enter Time in Minutes: ");
+	scanf("%d",&min);
+	if(min<0||min>59)
+	{
+		printf("Time in Minutes is between 0 to 59\n");
+		exit(1);
+	}
+	printf("Enter Time in Seconds: ");
+	scanf("%d",&sec);
+	if(sec<0||sec>59)
+	{
+		printf("Maximum Time in Seconds is between 0 to 59\n");
+		exit(1);
+	}
+	tsec=(hr*3600)+(min*60)+sec;
+	for(rsec=tsec;tsec>=0;tsec--)
+	{
+		rhr=tsec/3600;
+		rmin=(tsec%3600)/60;
+		rsec=(tsec%3600)%60;
+		printf("\rTime Remaining:  %02d:%02d:%02d",rhr,rmin,rsec);
+		sleep(1);
+	}
+	printf("\nTime Up!");
+return 0;	
+}
