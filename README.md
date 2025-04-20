@@ -1,4 +1,4 @@
-# ⏱️ C Countdown Timer
+# Countdown Timer
 
 This is a simple command-line countdown timer written in C.  
 You can enter the time in hours, minutes, and seconds — and it counts down in real-time.
