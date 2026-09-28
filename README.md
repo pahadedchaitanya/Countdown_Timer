@@ -20,5 +20,5 @@ You can enter the time in hours, minutes, and seconds — and it counts down in 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/pahadedchaitanya/Timer.git
+git clone https://github.com/pahadedchaitanya/Countdown_Timer.git
 cd Timer
